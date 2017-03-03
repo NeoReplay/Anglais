@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Telephasic by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header" class="container">
+
+						<!-- Logo -->
+							<h1 id="logo"><a href="../index.html"> Homepage </a></h1>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li>
+										<a href="#">Vocabulary Test</a>
+										<ul>
+											<li><a href="#">Medicine</a></li>
+											<li><a href="#">Computering</a></li>
+											<li><a href="#">Etiam dolore nisl</a></li>
+											<li>
+												<a href="../computering.html">Computering</a></li>
+											</li>
+											<li><a href="#">Veroeros feugiat</a></li>
+										</ul>
+									</li>
+									<li><a href="../left-sidebar.html">Left Sidebar</a></li>
+									<li class="break"><a href="../right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="../no-sidebar.html">No Sidebar</a></li>
+								</ul>
+							</nav>
+
+					</div>
+
+
+				</div>
+
+			<!-- Main -->
+				<div id = "main">
+					<div id ="reponse">
+						<h2>
+						<h2> 
+							<b>Level 2 : Feel the blink</b></br>
+						</h2>
+						</h2>
+						<h3>
+							<form id="quizz" name="level1" action = "level1.html" method="post">
+								<h4>
+									<b>Exercise 1 : <i>le matériel informatique</i></b>
+								</h4>
+									 <div class = "erreur" id="erreur1">
+									 </div>
+									 <div class="correct" id="correct1">
+									 </div>
+						</h3>	If you want this text to be , you'd better it into your clipboard. the main , 	
+								<FORM>
+									<SELECT name="nom" size="1">
+										<OPTION>lundi
+										<OPTION>mardi
+										<OPTION>mercredi
+										<OPTION>jeudi
+										<OPTION>vendredi
+									</SELECT>
+								</FORM>
+								search the function 'Save to clipboard' in your and on it. Then your text into your new document. 
+						<h3>
+								</br>
+								<h4>
+									<b>Translation 2 : <i>un ordinateur de bureau</i></b>
+								</h4>
+								<div class="erreur" id="erreur2">
+								</div>
+								<div class="correct" id = "correct2">
+								</div>
+								
+								<INPUT type= "radio" name="question2" value="computer"> computer
+								</br><INPUT type= "radio" name="question2" value="computeur"> computeur
+								</br><INPUT type= "radio" name="question2" value="compter"> compter
+								</br>
+								<h4>
+									<b>Translation 3 : <i>le disque dur</i></b>
+								</h4>
+								<div class="erreur" id="erreur3">
+								</div>
+								<div class="correct" id = "correct3">
+								</div>
+								
+								<INPUT type= "radio" name="question3" value="hard"> the hard disk
+								</br><INPUT type= "radio" name="question3" value="2"> the soft disk
+								</br><INPUT type= "radio" name="question3" value="3"> the disk hard
+								</br>
+								<h4>
+									<b>Translation 4 : <i>un fichier</i></b>
+								</h4>
+								<div class="erreur" id="erreur4">
+								</div>
+								<div class="correct" id = "correct4">
+								</div>
+								
+								<INPUT type= "radio" name="question4" value="fisher"> fisher
+								</br><INPUT type= "radio" name="question4" value="file"> file
+								</br><INPUT type= "radio" name="question4" value="repesitory"> repesitory
+								</br>
+								<h4>
+									<b>Translation 5 : <i>le mot de passe</i></b>
+								</h4>
+								<div class="erreur" id="erreur5">
+								</div>
+								<div class="correct" id = "correct5">
+								</div>
+								
+								<INPUT type= "radio" name="question5" value="mdp"> mdp
+								</br><INPUT type= "radio" name="question5" value="pass"> password
+								</br><INPUT type= "radio" name="question5" value="compter"> word of pass
+								
+								<div id = "score">
+								</div>
+								</br><INPUT type= "submit" value="validate">
+							</form>
+						</h3>
+						
+						
+					</div>
+					
+				</div>
+				<div id = "previous">
+							<a href="level1.html" class="button">&#8592 previous exercise </a>
+				</div>
+				<div id = "next">
+							<a href="level2.html" class="button"> next exercise &#8594</a>
+				</div>
+			<!-- Footer -->
+				
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+
+			<script>
+				let validateForm = function(e) {
+					console.log("submit !")
+					e.preventDefault()
+					var score = 0;
+					var nombreQuestion = 0;
+					
+					var q1 = document.forms["level1"]["question1"].value
+					nombreQuestion++
+					if(q1 == "hardware"){
+						document.getElementById("correct1").innerHTML = " Correct "
+						document.getElementById("erreur1").innerHTML = ""
+						score++
+					}
+					else
+					{
+						document.getElementById("correct1").innerHTML = ""
+						document.getElementById("erreur1").innerHTML = " Incorrect "
+					}
+					
+					nombreQuestion++
+					var q2 = document.forms["level1"]["question2"].value
+					if(q2 == "computer"){
+						document.getElementById("correct2").innerHTML = " Correct "
+						document.getElementById("erreur2").innerHTML = ""
+						score++
+					}
+					else
+					{
+						document.getElementById("correct2").innerHTML = ""
+						document.getElementById("erreur2").innerHTML = " Incorrect "
+					}
+					
+					nombreQuestion++
+					var q3 = document.forms["level1"]["question3"].value
+					if(q3 == "hard"){
+						document.getElementById("correct3").innerHTML = " Correct "
+						document.getElementById("erreur3").innerHTML = ""
+						score++
+					}
+					else
+					{
+						document.getElementById("correct3").innerHTML = ""
+						document.getElementById("erreur3").innerHTML = " Incorrect "
+					}
+					
+					nombreQuestion++
+					var q4 = document.forms["level1"]["question4"].value
+					if(q4 == "file"){
+						document.getElementById("correct4").innerHTML = " Correct "
+						document.getElementById("erreur4").innerHTML = ""
+						score++
+					}
+					else
+					{
+						document.getElementById("correct4").innerHTML = ""
+						document.getElementById("erreur4").innerHTML = " Incorrect "
+					}
+					
+					nombreQuestion++
+					var q5 = document.forms["level1"]["question5"].value
+					if(q5 == "pass"){
+						document.getElementById("correct5").innerHTML = " Correct "
+						document.getElementById("erreur5").innerHTML = ""
+						score++
+					}
+					else
+					{
+						document.getElementById("correct5").innerHTML = ""
+						document.getElementById("erreur5").innerHTML = " Incorrect "
+					}
+						document.getElementById("score").innerHTML = "<b>" +"Your score is : "+score+"/"+nombreQuestion+"</b>"
+				}
+			
+				$(function() {
+					$('#quizz').submit(validateForm) 
+				})
+							
+			</script>
+	</body>
+</html>
