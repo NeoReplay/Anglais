@@ -53,30 +53,85 @@
 			<!-- Main -->
 				<div id = "main">
 					<div id ="reponse">
-						
+						<h2>
+						<h2> 
+							<b>Level 1 : Translation</b></br>
+						</h2>
+						</h2>
 						<h3>
 							<form id="quizz" name="level1" action = "level1.html" method="post">
-								<h3>
-									Question 1 : What's the machine in front of you ?</br>
-									 <div id="erreur">
+								<h4>
+									<b>Translation 1 : <i>le matériel informatique</i></b>
+								</h4>
+									 <div class = "erreur" id="erreur1">
 									 </div>
-								</h3>
-								</br><INPUT type= "radio" name="question1" value="computer"> computer
-								</br><INPUT type= "radio" name="question1" value="computeur"> computeur
-								</br><INPUT type= "radio" name="question1" value="compter"> compter
-								<h3>
-									Question 1 : What's the machine in front of you ? 
-								</h3>
-								</br><INPUT type= "radio" name="question2" value="computer"> computer
+									 <div class="correct" id="correct1">
+									 </div>
+								
+								<INPUT type= "radio" name="question1" value="software"> software
+								</br><INPUT type= "radio" name="question1" value="hardware"> hardware
+								</br><INPUT type= "radio" name="question1" value="underware"> underware
+								</br>
+								<h4>
+									<b>Translation 2 : <i>un ordinateur de bureau</i></b>
+								</h4>
+								<div class="erreur" id="erreur2">
+								</div>
+								<div class="correct" id = "correct2">
+								</div>
+								
+								<INPUT type= "radio" name="question2" value="computer"> computer
 								</br><INPUT type= "radio" name="question2" value="computeur"> computeur
 								</br><INPUT type= "radio" name="question2" value="compter"> compter
-
+								</br>
+								<h4>
+									<b>Translation 3 : <i>le disque dur</i></b>
+								</h4>
+								<div class="erreur" id="erreur3">
+								</div>
+								<div class="correct" id = "correct3">
+								</div>
+								
+								<INPUT type= "radio" name="question3" value="hard"> the hard disk
+								</br><INPUT type= "radio" name="question3" value="2"> the soft disk
+								</br><INPUT type= "radio" name="question3" value="3"> the disk hard
+								</br>
+								<h4>
+									<b>Translation 4 : <i>un fichier</i></b>
+								</h4>
+								<div class="erreur" id="erreur4">
+								</div>
+								<div class="correct" id = "correct4">
+								</div>
+								
+								<INPUT type= "radio" name="question4" value="fisher"> fisher
+								</br><INPUT type= "radio" name="question4" value="file"> file
+								</br><INPUT type= "radio" name="question4" value="repesitory"> repesitory
+								</br>
+								<h4>
+									<b>Translation 5 : <i>le mot de passe</i></b>
+								</h4>
+								<div class="erreur" id="erreur5">
+								</div>
+								<div class="correct" id = "correct5">
+								</div>
+								
+								<INPUT type= "radio" name="question5" value="mdp"> mdp
+								</br><INPUT type= "radio" name="question5" value="pass"> password
+								</br><INPUT type= "radio" name="question5" value="compter"> word of pass
+								
+								<div id = "score">
+								</div>
 								</br><INPUT type= "submit" value="validate">
 							</form>
 						</h3>
 						
+						
 					</div>
 					
+				</div>
+				<div id = "next">
+							<a href="level2.html" class="button"> next exercise &#8594</a>
 				</div>
 
 			<!-- Footer -->
@@ -96,14 +151,74 @@
 				let validateForm = function(e) {
 					console.log("submit !")
 					e.preventDefault()
-					var x = document.forms["level1"]["question1"].value
-					if(x == "computer"){
-						alert("you doing well")
+					var score = 0;
+					var nombreQuestion = 0;
+					
+					var q1 = document.forms["level1"]["question1"].value
+					nombreQuestion++
+					if(q1 == "hardware"){
+						document.getElementById("correct1").innerHTML = " Correct "
+						document.getElementById("erreur1").innerHTML = ""
+						score++
 					}
 					else
 					{
-						document.getElementById("erreur").innerHTML = " Incorrect ";
+						document.getElementById("correct1").innerHTML = ""
+						document.getElementById("erreur1").innerHTML = " Incorrect "
 					}
+					
+					nombreQuestion++
+					var q2 = document.forms["level1"]["question2"].value
+					if(q2 == "computer"){
+						document.getElementById("correct2").innerHTML = " Correct "
+						document.getElementById("erreur2").innerHTML = ""
+						score++
+					}
+					else
+					{
+						document.getElementById("correct2").innerHTML = ""
+						document.getElementById("erreur2").innerHTML = " Incorrect "
+					}
+					
+					nombreQuestion++
+					var q3 = document.forms["level1"]["question3"].value
+					if(q3 == "hard"){
+						document.getElementById("correct3").innerHTML = " Correct "
+						document.getElementById("erreur3").innerHTML = ""
+						score++
+					}
+					else
+					{
+						document.getElementById("correct3").innerHTML = ""
+						document.getElementById("erreur3").innerHTML = " Incorrect "
+					}
+					
+					nombreQuestion++
+					var q4 = document.forms["level1"]["question4"].value
+					if(q4 == "file"){
+						document.getElementById("correct4").innerHTML = " Correct "
+						document.getElementById("erreur4").innerHTML = ""
+						score++
+					}
+					else
+					{
+						document.getElementById("correct4").innerHTML = ""
+						document.getElementById("erreur4").innerHTML = " Incorrect "
+					}
+					
+					nombreQuestion++
+					var q5 = document.forms["level1"]["question5"].value
+					if(q5 == "pass"){
+						document.getElementById("correct5").innerHTML = " Correct "
+						document.getElementById("erreur5").innerHTML = ""
+						score++
+					}
+					else
+					{
+						document.getElementById("correct5").innerHTML = ""
+						document.getElementById("erreur5").innerHTML = " Incorrect "
+					}
+						document.getElementById("score").innerHTML = "<b>" +"Your score is : "+score+"/"+nombreQuestion+"</b>"
 				}
 			
 				$(function() {

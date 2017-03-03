@@ -29,6 +29,21 @@
 		display :block;
 		text-align: center;
 	}
+	div#next{
+		float: right;
+		display :inline;
+		text-align: right;
+	}
+	div#previous{
+		float: left;
+		display:inline;
+	}
+	.erreur{
+		color: red;
+	}
+	.correct{
+		color:green;
+	}
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
