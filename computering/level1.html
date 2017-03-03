@@ -55,9 +55,11 @@
 					<div id ="reponse">
 						
 						<h3>
-							<form action="level1.html" method="post">
+							<form id="quizz" name="level1" action = "level1.html" method="post">
 								<h3>
-									Question 1 : What's the machine in front of you ? 
+									Question 1 : What's the machine in front of you ?</br>
+									 <div id="erreur">
+									 </div>
 								</h3>
 								</br><INPUT type= "radio" name="question1" value="computer"> computer
 								</br><INPUT type= "radio" name="question1" value="computeur"> computeur
@@ -83,7 +85,6 @@
 		</div>
 
 		<!-- Scripts -->
-
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.dropotron.min.js"></script>
 			<script src="../assets/js/skel.min.js"></script>
@@ -91,5 +92,24 @@
 			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="../assets/js/main.js"></script>
 
+			<script>
+				let validateForm = function(e) {
+					console.log("submit !")
+					e.preventDefault()
+					var x = document.forms["level1"]["question1"].value
+					if(x == "computer"){
+						alert("you doing well")
+					}
+					else
+					{
+						document.getElementById("erreur").innerHTML = " Incorrect ";
+					}
+				}
+			
+				$(function() {
+					$('#quizz').submit(validateForm) 
+				})
+							
+			</script>
 	</body>
 </html>
