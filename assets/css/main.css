@@ -37,7 +37,9 @@
 	div#previous{
 		float: left;
 		display:inline;
+		
 	}
+	
 	.erreur{
 		color: red;
 	}
