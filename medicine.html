@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Can you spell it ?</title>
+		<title>Computer Exercice</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -30,7 +30,7 @@
 									<li>
 										<a href="#">Vocabulary Test</a>
 										<ul>
-											<li><a href="medicine.html">Medicine</a></li>
+											<li><a href="#">Medicine</a></li>
 											
 												<li><a href="computering.html">Computering</a></li>
 											</li>
@@ -48,72 +48,19 @@
 			<!-- Main -->
 				<div id = "main">
 					<div id ="reponse">
+					<br><br>
 						<h2>
-						<h2> 
-							<b>Can you spell it ?</b></br>
-						</h2>
+						<h3> 
+							<b>Coming soon</b></br>
+						</h3>
 						</h2>
 						
-						<form id="quizz" name="level1" action = "level3.html" method="post">
-							<h4>
-								<b>Video 1 : <i>Listen and write what you heard</i></b>
-							</h4>
-								<div>
-									<div class = "erreur" id="erreur1">
-									</div>
-									<div class="correct" id="correct1">
-									</div>
-									<object width="425" height="355">
-										<param name="movie" value="http://www.youtube.com/v/ZwebZF0Q_gI&hl=fr"></param>
-										<param name="wmode" value="transparent"></param>
-										<embed src="http://www.youtube.com/v/ZwebZF0Q_gI&hl=fr" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed>
-									</object>
-
-								</div>
-								
-							
-							<INPUT type= "text" name="question1" value="">
-							</br>
-							
-							<b>Video 2 : <i>Listen and write what you heard</i></b></br>
-							<div class="erreur" id="erreur2">
-							</div>
-							<div class="correct" id = "correct2">
-							</div>
-							<object width="425" height="355">
-										<param name="movie" value="http://www.youtube.com/v/z40ujzr5pd0&hl=fr"></param>
-										<param name="wmode" value="transparent"></param>
-										<embed src="http://www.youtube.com/v/z40ujzr5pd0&hl=fr" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed>
-									</object>
-							
-							<INPUT type= "text" name="question2" value="">
-							</br>
-							
-							<b>Video 3 : <i>Listen and write what you heard</i></b></br>
-							<div class="erreur" id="erreur3">
-							</div>
-							<div class="correct" id = "correct3">
-							</div>
-							<object width="425" height="355">
-										<param name="movie" value="http://www.youtube.com/v/OF46VBr5cFs&hl=fr"></param>
-										<param name="wmode" value="transparent"></param>
-										<embed src="http://www.youtube.com/v/OF46VBr5cFs&hl=fr" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed>
-									</object>
-							
-							
-							<INPUT type= "text" name="question3" value=""> 
-							</br>
-							
-							<div id = "score">
-							</div>
-							</br><INPUT type= "submit" value="validate">
-						</form>
-					
 						
 						
 					</div>
 					
 				</div>
+				
 
 			<!-- Footer -->
 				
@@ -121,12 +68,12 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 			<script>
 				let validateForm = function(e) {
@@ -137,7 +84,7 @@
 					
 					var q1 = document.forms["level1"]["question1"].value
 					nombreQuestion++
-					if(q1 == "You cannot pass"){
+					if(q1 == "hardware"){
 						document.getElementById("correct1").innerHTML = " Correct "
 						document.getElementById("erreur1").innerHTML = ""
 						score++
@@ -150,7 +97,7 @@
 					
 					nombreQuestion++
 					var q2 = document.forms["level1"]["question2"].value
-					if(q2 == "I am your father"){
+					if(q2 == "computer"){
 						document.getElementById("correct2").innerHTML = " Correct "
 						document.getElementById("erreur2").innerHTML = ""
 						score++
@@ -163,7 +110,7 @@
 					
 					nombreQuestion++
 					var q3 = document.forms["level1"]["question3"].value
-					if(q3 == "I'll be back"){
+					if(q3 == "hard"){
 						document.getElementById("correct3").innerHTML = " Correct "
 						document.getElementById("erreur3").innerHTML = ""
 						score++
@@ -174,7 +121,31 @@
 						document.getElementById("erreur3").innerHTML = " Incorrect "
 					}
 					
+					nombreQuestion++
+					var q4 = document.forms["level1"]["question4"].value
+					if(q4 == "file"){
+						document.getElementById("correct4").innerHTML = " Correct "
+						document.getElementById("erreur4").innerHTML = ""
+						score++
+					}
+					else
+					{
+						document.getElementById("correct4").innerHTML = ""
+						document.getElementById("erreur4").innerHTML = " Incorrect "
+					}
 					
+					nombreQuestion++
+					var q5 = document.forms["level1"]["question5"].value
+					if(q5 == "pass"){
+						document.getElementById("correct5").innerHTML = " Correct "
+						document.getElementById("erreur5").innerHTML = ""
+						score++
+					}
+					else
+					{
+						document.getElementById("correct5").innerHTML = ""
+						document.getElementById("erreur5").innerHTML = " Incorrect "
+					}
 						document.getElementById("score").innerHTML = "<b>" +"Your score is : "+score+"/"+nombreQuestion+"</b>"
 				}
 			
