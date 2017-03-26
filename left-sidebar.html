@@ -104,35 +104,6 @@
 							<INPUT type= "text" name="question3" value=""> 
 							</br>
 							
-							<b>Video 4 : <i>Listen and write what you heard</i></b></br>
-							<div class="erreur" id="erreur4">
-							</div>
-							<div class="correct" id = "correct4">
-							</div>
-							<object width="425" height="355">
-										<param name="movie" value="http://www.youtube.com/v/_etwz7NkemE&hl=fr"></param>
-										<param name="wmode" value="transparent"></param>
-										<embed src="http://www.youtube.com/v/_etwz7NkemE&hl=fr" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed>
-									</object>
-							
-							
-							<INPUT type= "text" name="question4" value=""> 
-							</br>
-							
-							<b>Video 5 : <i>Listen and write what you heard</i></b></br>
-							<div class="erreur" id="erreur5">
-							</div>
-							<div class="correct" id = "correct5">
-							</div>
-							<object width="425" height="355">
-										<param name="movie" value="http://www.youtube.com/v/_etwz7NkemE&hl=fr"></param>
-										<param name="wmode" value="transparent"></param>
-										<embed src="http://www.youtube.com/v/_etwz7NkemE&hl=fr" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed>
-									</object>
-							
-							
-							<INPUT type= "text" name="question5" value="">
-							
 							<div id = "score">
 							</div>
 							</br><INPUT type= "submit" value="validate">
@@ -169,7 +140,7 @@
 					
 					var q1 = document.forms["level1"]["question1"].value
 					nombreQuestion++
-					if(q1 == "hardware"){
+					if(q1 == "You cannot pass"){
 						document.getElementById("correct1").innerHTML = " Correct "
 						document.getElementById("erreur1").innerHTML = ""
 						score++
@@ -182,7 +153,7 @@
 					
 					nombreQuestion++
 					var q2 = document.forms["level1"]["question2"].value
-					if(q2 == "computer"){
+					if(q2 == "I am your father"){
 						document.getElementById("correct2").innerHTML = " Correct "
 						document.getElementById("erreur2").innerHTML = ""
 						score++
@@ -195,7 +166,7 @@
 					
 					nombreQuestion++
 					var q3 = document.forms["level1"]["question3"].value
-					if(q3 == "hard"){
+					if(q3 == "I'll be back"){
 						document.getElementById("correct3").innerHTML = " Correct "
 						document.getElementById("erreur3").innerHTML = ""
 						score++
@@ -206,31 +177,7 @@
 						document.getElementById("erreur3").innerHTML = " Incorrect "
 					}
 					
-					nombreQuestion++
-					var q4 = document.forms["level1"]["question4"].value
-					if(q4 == "file"){
-						document.getElementById("correct4").innerHTML = " Correct "
-						document.getElementById("erreur4").innerHTML = ""
-						score++
-					}
-					else
-					{
-						document.getElementById("correct4").innerHTML = ""
-						document.getElementById("erreur4").innerHTML = " Incorrect "
-					}
 					
-					nombreQuestion++
-					var q5 = document.forms["level1"]["question5"].value
-					if(q5 == "pass"){
-						document.getElementById("correct5").innerHTML = " Correct "
-						document.getElementById("erreur5").innerHTML = ""
-						score++
-					}
-					else
-					{
-						document.getElementById("correct5").innerHTML = ""
-						document.getElementById("erreur5").innerHTML = " Incorrect "
-					}
 						document.getElementById("score").innerHTML = "<b>" +"Your score is : "+score+"/"+nombreQuestion+"</b>"
 				}
 			
