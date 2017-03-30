@@ -39,7 +39,9 @@
 		display:inline;
 		
 	}
-	
+	div#over{
+		color:blue;
+	}
 	.erreur{
 		color: red;
 	}

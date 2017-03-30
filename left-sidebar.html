@@ -36,7 +36,9 @@
 											</li>
 										</ul>
 									</li>
+									<li><a href="#"></a></li>
 									<li class = "break"><a href="left-sidebar.html">Can you spell it ?</a></li>
+									<li><a href="right-sidebar.html">Don't kill yourself</a></li>
 								</ul>
 							</nav>
 
@@ -54,7 +56,7 @@
 						</h2>
 						</h2>
 						
-						<form id="quizz" name="level1" action = "level3.html" method="post">
+						<form id="quizz" name="level1" action = "left-sidebar.html" method="post">
 							<h4>
 								<b>Video 1 : <i>Listen and write what you heard</i></b>
 							</h4>
@@ -137,7 +139,8 @@
 					
 					var q1 = document.forms["level1"]["question1"].value
 					nombreQuestion++
-					if(q1 == "You cannot pass"){
+					q1 = q1.toLowerCase()
+					if(q1 == "you shall not pass"){
 						document.getElementById("correct1").innerHTML = " Correct "
 						document.getElementById("erreur1").innerHTML = ""
 						score++
@@ -150,7 +153,8 @@
 					
 					nombreQuestion++
 					var q2 = document.forms["level1"]["question2"].value
-					if(q2 == "I am your father"){
+					q2 = q2.toLowerCase()
+					if(q2 == "i am your father"){
 						document.getElementById("correct2").innerHTML = " Correct "
 						document.getElementById("erreur2").innerHTML = ""
 						score++
@@ -163,7 +167,8 @@
 					
 					nombreQuestion++
 					var q3 = document.forms["level1"]["question3"].value
-					if(q3 == "I'll be back"){
+					q3 = q3.toLowerCase()
+					if(q3 == "i'll be back"){
 						document.getElementById("correct3").innerHTML = " Correct "
 						document.getElementById("erreur3").innerHTML = ""
 						score++
